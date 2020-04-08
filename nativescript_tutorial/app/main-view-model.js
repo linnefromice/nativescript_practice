@@ -9,13 +9,17 @@ function createViewModel() {
         counter++;
         if (counter > 10) {
             viewModel.set("message", 'Over 10 ...');
+        } else if (counter < 0) {
+            viewModel.set("message", 'Under 0 ...');
         } else {
             viewModel.set("message", `${counter}`);
         }
     }
     viewModel.requestMinus = () => {
         counter--;
-        if (counter < 0) {
+        if (counter > 10) {
+            viewModel.set("message", 'Over 10 ...');
+        } else if (counter < 0) {
             viewModel.set("message", 'Under 0 ...');
         } else {
             viewModel.set("message", `${counter}`);

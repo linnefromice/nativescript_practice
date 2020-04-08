@@ -17,7 +17,12 @@ function createViewModel() {
         viewModel.counter--;
         viewModel.set("message", getMessage(viewModel.counter));
     };
-
+    viewModel.requestAdd = () => {
+        console.log('REQUEST PLUS');
+    }
+    viewModel.requestMinus = () => {
+        console.log('REQUEST MINUS');
+    }
     return viewModel;
 }
 
